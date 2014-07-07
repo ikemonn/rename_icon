@@ -38,8 +38,8 @@ module RenameIcon
     desc "TODO:あとで使用方法について書く", "あとでかく"
     def rename()
       @file = []
-      @dir = "/Users/n00972/Dropbox/github/tmp/rename_icon/image";
-      # @dir = "./";
+      # @dir = "/Users/n00972/Dropbox/github/tmp/rename_icon/image";
+      @dir = "./";
       get_file()
       @file.each do |file|
         resize(file)
