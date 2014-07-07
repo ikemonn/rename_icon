@@ -30,6 +30,22 @@ module RenameIcon
         File.rename(@dir + '/' + file, @dir + '/' + 'Icon-76.png')
       when [152, 152]
         File.rename(@dir + '/' + file, @dir + '/' + 'Icon-76@2x.png')
+      when [29, 29]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small.png')
+      when [58, 58]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small@2x.png')
+      when [40, 40]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small-40.png')
+      when [80, 80]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small-40@2x.png')
+      when [50, 50]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small-50.png')
+      when [100, 100]
+        File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small-50@2x.png')
+      when [512, 512]
+        File.rename(@dir + '/' + file, @dir + '/' + 'iTunesArtwork.png')
+      when [1024, 102]
+        File.rename(@dir + '/' + file, @dir + '/' + 'iTunesArtwork@2x.png')
       else
         puts "【#{file}】は対応するアイコンサイズがないため、リネームされませんでした。"
       end
@@ -38,7 +54,6 @@ module RenameIcon
     desc "TODO:あとで使用方法について書く", "あとでかく"
     def rename()
       @file = []
-      # @dir = "/Users/n00972/Dropbox/github/tmp/rename_icon/image";
       @dir = "./";
       get_file()
       @file.each do |file|
