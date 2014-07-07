@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'rename_icon'
+RenameIcon::Command.start
