@@ -4,6 +4,8 @@ require 'image_size'
 
 module RenameIcon
   class Command < Thor
+    default_command :rename
+
     def get_file
       Dir::foreach(@dir) do |file|
         @file << file if /.*?\.(jpg|jpeg|png)/ =~ file
@@ -50,7 +52,7 @@ module RenameIcon
       end
     end
 
-    desc 'rename_icon', 'rename current folder icon name'
+    desc 'rename', 'rename current folder icon name'
     def rename
       @file = []
       @dir = './'
