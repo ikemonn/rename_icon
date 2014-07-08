@@ -1,10 +1,10 @@
-require "rename_icon"
+require 'rename_icon'
 require 'thor'
 require 'image_size'
 
 module RenameIcon
   class Command < Thor
-    def get_file()
+    def get_file
       Dir::foreach(@dir) do |file|
         @file << file if /.*?\.(jpg|jpeg|png)/ =~ file
       end
@@ -44,22 +44,22 @@ module RenameIcon
         File.rename(@dir + '/' + file, @dir + '/' + 'Icon-Small-50@2x.png')
       when [512, 512]
         File.rename(@dir + '/' + file, @dir + '/' + 'iTunesArtwork.png')
-      when [1024, 102]
+      when [1024, 1024]
         File.rename(@dir + '/' + file, @dir + '/' + 'iTunesArtwork@2x.png')
       else
-        puts "【#{file}】は対応するアイコンサイズがないため、リネームされませんでした。"
+        puts "【#{file}】do not match icon size."
       end
     end
 
-    desc "TODO:あとで使用方法について書く", "あとでかく"
-    def rename()
+    desc 'TODO:あとで使用方法について書く', 'あとでかく'
+    def rename
       @file = []
-      @dir = "./";
-      get_file()
+      @dir = './'
+      get_file
       @file.each do |file|
         resize(file)
       end
-      puts "リネームが完了しました。"
+      puts 'Rename finish!!'
     end
   end
 end
