@@ -11,7 +11,6 @@ module RenameIcon
     end
 
     def resize(file)
-      # TODO:画像のパスはカレントディレクトリに書き換える
       size = ImageSize.path(@dir + '/' + file).size
       case size
       when [57, 57]
@@ -51,7 +50,7 @@ module RenameIcon
       end
     end
 
-    desc 'TODO:あとで使用方法について書く', 'あとでかく'
+    desc 'rename_icon', 'rename current folder icon name'
     def rename
       @file = []
       @dir = './'
