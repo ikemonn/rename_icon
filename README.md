@@ -1,7 +1,7 @@
 # RenameIcon
 
 Rename icons as appropriate names for iOS App.  
-If you have hoge.png(57×57), this gem rename it as Icon.png.  
+If you have hoge.png(57×57), this gem renames it as Icon.png.  
   
 Target names↓  
 
