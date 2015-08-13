@@ -1,6 +1,28 @@
 # RenameIcon
 
-TODO: Write a gem description
+Rename icons as appropriate names.
+If you have hoge.png(57×57), this gem rename it as Icon.png.
+
+Target names↓
+
+```
+Icon.png
+Icon@2x.png
+Icon-72.png
+Icon-72@2x.png
+Icon-60.png
+Icon-60@2x.png
+Icon-76.png
+Icon-76@2x.png
+Icon-Small.png
+Icon-Small@2x.png
+Icon-Small-40.png
+Icon-Small-40@2x.png
+Icon-Small-50.png
+Icon-Small-50@2x.png
+iTunesArtwork.png
+iTunesArtwork@2x.png
+```
 
 ## Installation
 
@@ -18,7 +40,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Move the directory which has images you want to rename.
+After that just execute the following command.
+
+```
+$ rename_icon
+```
+
+Then the images will be renamed.
 
 ## Contributing
 
